@@ -37,5 +37,6 @@ export function compareStrings (strA, strB) {
 }
 
 export function repeat (count, func) {
-	while (count-- > 0) func(count + 1);
+	let i = 0;
+	while (i++ < count) func(i);
 }

@@ -19,7 +19,7 @@ body {
 main {
 	--offsetTop: 1.5rem;
 	flex: 0 1 720px;
-	margin: var(--offsetTop) 0 5rem calc(3vw + 140px);
+	margin: var(--offsetTop) 0 5rem 186px;
 	transition: margin-top .25s ease-out;
 } #autosuggest.show+main {
 	--offsetTop: 180px;
@@ -190,7 +190,7 @@ aside {
 }
 
 .l-offsetleft {
-	padding-left: 3vw;
+	padding-left: 46px;
 }
 
 .card {
@@ -244,6 +244,17 @@ aside {
 	to {
 		opacity: 1;
 		transform: none;
+	}
+}
+
+.fadeout {
+	opacity: 1;
+	transform: none;
+	animation: fadeout .5s ease-out forwards;
+} @keyframes fadeout {
+	to {
+		opacity: 0;
+		transform: translateY(-5px);
 	}
 }
 

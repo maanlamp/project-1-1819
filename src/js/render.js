@@ -15,6 +15,13 @@ export function resultsToDivs (results, {
 			"coverimages.coverimage.0._text",
 			"./src/images/coverimage_notfound.png");
 
+		img.addEventListener("load", () => { //Some images aren't actually images even though they load
+			if (img.width <= 1) img.src = optionalChain(
+				result,
+				"coverimages.coverimage.1._text",
+				"./src/images/coverimage_notfound.png");
+		});
+
 		title.innerText = truncateString(
 			optionalChain(
 				result,

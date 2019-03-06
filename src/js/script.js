@@ -19,7 +19,7 @@ void function autosuggestOnInput () {
 			if (input.value === "") return autosuggest.classList.remove("show");
 			if (input.value === lastValue
 				&& autosuggest.classList.contains("show")) return;
-			
+
 			autosuggest.classList.add("show");
 			lastValue = input.value;
 			(await api.createStream(`search/${input.value}{3}`)
@@ -71,7 +71,7 @@ void function filterListener () {
 
 	filter.addEventListener("click", event => {
 		event.preventDefault();
-		console.log("Filtering...");	
+		console.log("Filtering...");
 	});
 }();
 
@@ -79,29 +79,28 @@ async function search (query) {
 	clearTimeout(window.autoSuggestTimeout);
 	const autosuggest = document.querySelector("#autosuggest");
 	const main = document.querySelector("main");
+	const placeholders = 5;
 	const builtQuery = query
 		+ window.location.hash
 			.replace(/^#/, "&");
 
 	autosuggest.classList.remove("show");
 	await clearElement(main);
-	repeat(3, iteration => {
+	repeat(placeholders, i => {
 		const container = document.createElement("div");
 		const div = document.createElement("div");
 
 		container.classList.add("fadein", "itemContainer");
-		container.style.setProperty("animation-delay", `${3 * 50 - iteration * 50}ms`);
+		container.style.setProperty("animation-delay", `${i * 50}ms`);
 		container.append(div);
 		div.classList.add("card");
+		div.style.setProperty("animation-delay", `${i * 50}ms`);
 		main.append(container);
 	});
-	(await api.createStream(`search/${builtQuery}{40}`)
+	(await api.createStream(`search/${builtQuery}{10}`)
 			.catch(() => noContent(main)))
 		.pipe(results => {
-			return resultsToDivs(results, {
-					titleLength: Infinity,
-					textLength: Infinity
-				})
+			return resultsToDivs(results, { textLength: 225 })
 				.map((div, i) => {
 					div.classList.add("card", "fadein");
 					div.style.setProperty("animation-delay", `${i * 150}ms`);
@@ -109,9 +108,7 @@ async function search (query) {
 				});
 		})
 		.all()
-		.finally(() => {
-			repeat(3, () => {main.firstChild.remove()});
-		});
+		.finally(() => repeat(placeholders, () => main.firstChild.remove()));
 }
 
 void function changeActiveSearchTypeOnClick () {
@@ -131,13 +128,11 @@ void function changeActiveSearchTypeOnClick () {
 void function registerClearButtonBehaviour () {
 	const clear = document.querySelector("#clear");
 	const input = document.querySelector("input");
-	const main = document.querySelector("main");
 
 	clear.addEventListener("click", () => {
 		autosuggest.classList.remove("show");
 		clear.classList.remove("show");
 		input.value = "";
-		clearElement(main); //Is this desired?
 	});
 	input.addEventListener("input", () => {
 		if (input.value === "") return clear.classList.remove("show");
@@ -159,7 +154,7 @@ function noContent (container) {
 }
 
 //--** Should have **--//
-//No "noContent" if main empty when autosuggesting
+//hide "noContent" if main empty when autosuggesting
 //CSS dem search results
 //Other media types have other place for their image
 
@@ -171,3 +166,4 @@ function noContent (container) {
 //Gerelateerde items
 //Highlights / staff choice / meest geleend
 //Make filtering work
+//custom scrollbar
