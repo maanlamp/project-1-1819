@@ -266,4 +266,6 @@ aside {
 	background-size: 1.5rem;
 	display: flex;
 	align-items: center;
+} #autosuggest.show:not(:empty)+main .noContent {
+	display: none;
 }

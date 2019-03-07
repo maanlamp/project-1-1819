@@ -1,6 +1,6 @@
 import { API } from "../../node_modules/oba-wrapper/js/index.js";
 import { clearElement, repeat } from "./helpers.js";
-import { resultsToDivs } from "./render.js";
+import { resultsToDivs, render } from "./render.js";
 
 const api = new API({
 	key: "1e19898c87464e239192c8bfe422f280"
@@ -87,14 +87,12 @@ async function search (query) {
 	autosuggest.classList.remove("show");
 	await clearElement(main);
 	repeat(placeholders, i => {
-		const container = document.createElement("div");
-		const div = document.createElement("div");
+		const container = render("div.fadein.itemContainer");
+		const div = render("div.card"); //Separate renders because of style.setProperty
 
-		container.classList.add("fadein", "itemContainer");
 		container.style.setProperty("animation-delay", `${i * 50}ms`);
-		container.append(div);
-		div.classList.add("card");
 		div.style.setProperty("animation-delay", `${i * 50}ms`);
+		container.append(div);
 		main.append(container);
 	});
 	(await api.createStream(`search/${builtQuery}{10}`)
@@ -142,25 +140,23 @@ void function registerClearButtonBehaviour () {
 }();
 
 function noContent (container) {
-	const div = document.createElement("div");
-	const p = document.createElement("p");
-	div.classList.add("noContent");
-	p.innerText = "Geen resultaten gevonden.";
-	div.append(p);
+	const div = render(`
+		div.noContent
+			> p "Geen resultaten gevonden."`);
+
 	container.append(div);
+
 	return {
 		pipe(){return {all(){return Promise.reject()}}}
 	}; //Shitty way of supressing "no property pipe/all on undefined" if caught
 }
 
 //--** Should have **--//
-//hide "noContent" if main empty when autosuggesting
 //CSS dem search results
 //Other media types have other place for their image
 
-//--** Could have **--//
-//Change header background to be 1 or more cover images of search query.
-//Text color blend mode for search types
+//--** Could have **--
+//Make filtering work
 
 //--** Would have **--//
 //Gerelateerde items
