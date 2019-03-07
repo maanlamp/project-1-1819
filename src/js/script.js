@@ -39,7 +39,7 @@ void function autosuggestOnInput () {
 							autosuggest.append(div);
 						});
 				});
-				//Sort results based on relevancy, use helpers.js>compareStrings()?
+			//Sort results based on relevancy, use helpers.js>compareStrings()?
 		}, 450);
 	});
 }();

@@ -75,8 +75,11 @@ export function resultsToDivs (results, {
 
 		img.src = optionalChain( //Have to set src manually instead of in render() because of the following eventlistener
 			result,
-			"coverimages.coverimage.0._text",
-			"./src/images/coverimage_notfound.png");
+			"coverimages.coverimage.0._text")
+			|| optionalChain(
+				results,
+				"coverimages.coverimage._text",
+				"./src/images/coverimage_notfound.png");
 
 		img.addEventListener("load", () => { //Some images aren't actually images even though they load
 			if (img.width <= 1) img.src = optionalChain(
@@ -84,6 +87,8 @@ export function resultsToDivs (results, {
 				"coverimages.coverimage.1._text",
 				"./src/images/coverimage_notfound.png");
 		});
+
+		console.log(result);
 
 		div.append(img, h2, p);
 		return div;
