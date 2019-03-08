@@ -2,14 +2,12 @@
 
 ![Live demo thumbnail](./src/images/search.gif)
 
-[Try out the live demo!]()
+[Try out the live demo!](https://maanlamp-oba-project-1.netlify.com/)
 
-<br/>
 <br/>
 
 ---
 
-<br/>
 <br/>
 
 ## Glossary
@@ -18,14 +16,28 @@
 
 - [Project 1 @cmda-minor-web · 2018-2019](#project-1-cmda-minor-web--2018-2019)
 	- [Glossary](#glossary)
+	- [Getting started](#getting-started)
 	- [Concept](#concept)
 		- [Features](#features)
 			- [Autocompletion](#autocompletion)
 			- [Error feedback](#error-feedback)
-	- [Getting started](#getting-started)
 	- [License](#license)
 
 </details>
+
+<br/>
+<br/>
+<br/>
+
+## Getting started
+To get searching, firstly clone the repo.
+
+Then, install dependencies:
+```shell
+npm i
+```
+
+Then, run some form of a server to host the webapp. I recommend [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 <br/>
 <br/>
@@ -48,20 +60,6 @@ Autocompletion now not only suggests titles, it gets a coverimage and a short de
 The webapp tells you if you search for something non-existant:
 
 ![Look at this sweet autosuggest!](./src/images/noContent.gif)
-
-
-<br/>
-<br/>
-
-## Getting started
-To get searching, firstly clone the repo.
-
-Then, install dependencies:
-```shell
-npm i
-```
-
-Then, run some form of a server to host the webapp. I recommend [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 <br/>
 <br/>
