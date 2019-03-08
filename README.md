@@ -21,6 +21,7 @@
 		- [Features](#features)
 			- [Autocompletion](#autocompletion)
 			- [Error feedback](#error-feedback)
+			- [Extra suggestions](#extra-suggestions)
 	- [License](#license)
 
 </details>
@@ -60,6 +61,9 @@ Autocompletion now not only suggests titles, it gets a coverimage and a short de
 The webapp tells you if you search for something non-existant:
 
 ![Look at this sweet autosuggest!](./src/images/noContent.gif)
+
+#### Extra suggestions
+Whenever you have searched for an item within the OBA catalogue, the app will recommend a few other items based on what you have searched. It will also expose some genres/categories for the user to explore.
 
 <br/>
 <br/>
