@@ -41,6 +41,8 @@ npm i
 
 Then, run some form of a server to host the webapp. I recommend [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
+then, open `index.html`, and browse away!
+
 <br/>
 <br/>
 
