@@ -106,7 +106,13 @@ async function search (query) {
 				});
 		})
 		.all()
-		.finally(() => repeat(placeholders, () => main.firstChild.remove()));
+		.finally(() => {
+			repeat(placeholders,
+				() => main.firstChild.remove());
+
+			//Add related
+			//Add categories/types
+		});
 }
 
 void function changeActiveSearchTypeOnClick () {

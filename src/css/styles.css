@@ -49,7 +49,8 @@ form {
 	position: sticky;
 	top: -85px;
 	width: 100vw;
-	background: linear-gradient(to right, rgba(249,249,249,1) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, rgba(249,249,249,1) 100%);
+	background: url(../images/search_bg.png) no-repeat center center;
+	background-size: cover;
 	backdrop-filter: blur(6px) saturate(.5);
 } #search {
 	display: flex;
@@ -98,6 +99,9 @@ form {
 	font-weight: 500;
 	text-decoration: none;
 	transition: color .1s ease-out;
+	mix-blend-mode: color-burn;
+} #search #types a.link-active {
+	text-decoration: underline;
 } #search #types a.link-active,
 	#search #types a:hover,
 	#search #types a:focus {

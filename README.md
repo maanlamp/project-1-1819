@@ -1,9 +1,62 @@
 # Project 1 @cmda-minor-web · 2018-2019
 
-## Zoek in de de collectie van de OBA
+![Live demo thumbnail](./src/images/search.gif)
 
-Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.00 uur de kickoff, vrijdag zijn de presentaties van de resultaten. In een week bouwt iedere student een eigen prototype dat bezoekers kan helpen om items uit de OBA collectie te vinden. Technieken geleerd bij [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) worden toegepast bij het bouwen van de de prototypes.
+[Try out the live demo!]()
 
-We verzamelen maandagochtend om 09.45 op de 1e verdieping van de Centrale OBA, [Oosterdokskade 143](https://www.google.com/maps/place/OBA+library+of+Amsterdam/@52.3756983,4.9082087,15z/data=!4m2!3m1!1s0x0:0x6b97f693e6ecb494?ved=2ahUKEwioo6OrzubgAhWLNOwKHR6KDQgQ_BIwCnoECAYQCA).
+<br/>
+<br/>
 
+---
 
+<br/>
+<br/>
+
+## Glossary
+<details>
+	<summary>Click to expand</summary>
+
+- [Project 1 @cmda-minor-web · 2018-2019](#project-1-cmda-minor-web--2018-2019)
+	- [Glossary](#glossary)
+	- [Concept](#concept)
+		- [Features](#features)
+			- [Autocompletion](#autocompletion)
+	- [Getting started](#getting-started)
+	- [License](#license)
+
+</details>
+
+<br/>
+<br/>
+
+## Concept
+
+This repo contains a webapp built to showcase possible improvements to the autosuggest feature for the OBA. It also searches for items in the database, and allows for more casual browsing through suggested items based on your search, and suggested categories.
+
+### Features
+The concept is based on a couple of concise but important features.
+
+#### Autocompletion
+Autocompletion now not only suggests titles, it gets a coverimage and a short description aswell.
+
+![Look at this sweet autosuggest!](./src/images/autosuggest.gif)
+I'm getting funny feelings 🤤.
+
+<br/>
+<br/>
+
+## Getting started
+To get searching, firstly clone the repo.
+
+Then, install dependencies:
+```shell
+npm i
+```
+
+Then, run some form of a server to host the webapp. I recommend [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+<br/>
+<br/>
+
+## License
+Licensed under MIT, copyright [@maanlamp](https://github.com/maanlamp)
