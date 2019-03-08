@@ -27,12 +27,6 @@ main {
 	margin-top: .5rem;
 }
 
-aside {
-	flex: 0 1 420px;
-	margin: 1.5rem 0 0 1rem;
-	max-height: 300px;
-}
-
 button {
 	cursor: pointer;
 }
@@ -192,18 +186,14 @@ form {
 	}
 }
 
-aside {
-	display: none;
-}
-
-.l-offsetleft {
-	padding-left: 46px;
-}
-
 .card {
 	background-color: white;
 	border-bottom: 2px solid rgb(240, 240, 240);
 	padding: 1rem;
+} .card>h2 {
+	font-size: 1.5rem;
+} .card>*+* {
+	margin-top: 1rem;
 } .card+.card {
 	margin-top: .5rem;
 } .card:empty {
@@ -275,4 +265,31 @@ aside {
 	align-items: center;
 } #autosuggest.show:not(:empty)+main .noContent {
 	display: none;
+}
+
+.l-offsetleft {
+	padding-left: 46px;
+}
+
+aside {
+	flex: 0 1 420px;
+	margin: 1.5rem 0 0 1rem;
+	max-height: 270px;
+	transition: all .5s ease-out;
+	opacity: 0;
+	transition-delay: 2s;
+	position: sticky;
+	transform: translateY(-10px);
+	top: 70px;
+	background: white url(../images/related.png) no-repeat left bottom 1rem;
+	background-size: 110%;
+} aside.show {
+	opacity: 1;
+	transform: none;
+}
+
+@media only screen and (max-width: 1350px) {
+	aside {
+		display: none;
+	}
 }

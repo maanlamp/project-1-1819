@@ -52,7 +52,7 @@ export function render (template) {
 }
 
 export function resultsToDivs (results, {
-	titleLength = 72,
+	titleLength = 48,
 	textLength = 144
 } = {}) {
 	return results.map(result => {

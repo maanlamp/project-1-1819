@@ -78,13 +78,17 @@ void function filterListener () {
 async function search (query) {
 	clearTimeout(window.autoSuggestTimeout);
 	const autosuggest = document.querySelector("#autosuggest");
+	const aside = document.querySelector("aside");
 	const main = document.querySelector("main");
 	const placeholders = 5;
 	const builtQuery = query
 		+ window.location.hash
 			.replace(/^#/, "&");
 
-	autosuggest.classList.remove("show");
+	if (aside.classList.contains("show")) {
+		aside.classList.remove("show");
+		aside.classList.add("fadeout");
+	}
 	await clearElement(main);
 	repeat(placeholders, i => {
 		const container = render("div.fadein.itemContainer");
@@ -110,8 +114,7 @@ async function search (query) {
 			repeat(placeholders,
 				() => main.firstChild.remove());
 
-			//Add related
-			//Add categories/types
+			aside.classList.add("show");
 		});
 }
 
@@ -158,14 +161,11 @@ function noContent (container) {
 }
 
 //--** Should have **--//
-//CSS dem search results
-//Other media types have other place for their image
+//Other media types have other place for their image //THE DATA IS TOO MESSY :(((
 
 //--** Could have **--
 //Make filtering work
 
 //--** Would have **--//
-//Gerelateerde items
 //Highlights / staff choice / meest geleend
-//Make filtering work
 //custom scrollbar
