@@ -21,6 +21,7 @@
 	- [Concept](#concept)
 		- [Features](#features)
 			- [Autocompletion](#autocompletion)
+			- [Error feedback](#error-feedback)
 	- [Getting started](#getting-started)
 	- [License](#license)
 
@@ -33,6 +34,8 @@
 
 This repo contains a webapp built to showcase possible improvements to the autosuggest feature for the OBA. It also searches for items in the database, and allows for more casual browsing through suggested items based on your search, and suggested categories.
 
+<br/>
+
 ### Features
 The concept is based on a couple of concise but important features.
 
@@ -40,7 +43,12 @@ The concept is based on a couple of concise but important features.
 Autocompletion now not only suggests titles, it gets a coverimage and a short description aswell.
 
 ![Look at this sweet autosuggest!](./src/images/autosuggest.gif)
-I'm getting funny feelings 🤤.
+
+#### Error feedback
+The webapp tells you if you search for something non-existant:
+
+![Look at this sweet autosuggest!](./src/images/noContent.gif)
+
 
 <br/>
 <br/>

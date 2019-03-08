@@ -88,8 +88,6 @@ export function resultsToDivs (results, {
 				"./src/images/coverimage_notfound.png");
 		});
 
-		console.log(result);
-
 		div.append(img, h2, p);
 		return div;
 	});
