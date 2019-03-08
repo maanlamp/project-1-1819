@@ -1,0 +1,47 @@
+{
+  "_args": [
+    [
+      "github:maanlamp/oba-wrapper",
+      "C:\\Users\\Jeboiiwouter\\Desktop\\PROJECTS\\Git\\project-1-1819"
+    ]
+  ],
+  "_from": "github:maanlamp/oba-wrapper",
+  "_id": "oba-wrapper@github:maanlamp/oba-wrapper#886085f1f0700e210507934cfae1051c44edb2be",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/oba-wrapper",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "github:maanlamp/oba-wrapper",
+    "rawSpec": "github:maanlamp/oba-wrapper",
+    "saveSpec": "github:maanlamp/oba-wrapper",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:maanlamp/oba-wrapper#886085f1f0700e210507934cfae1051c44edb2be",
+  "_spec": "github:maanlamp/oba-wrapper",
+  "_where": "C:\\Users\\Jeboiiwouter\\Desktop\\PROJECTS\\Git\\project-1-1819",
+  "author": {
+    "name": "Maanlamp"
+  },
+  "bugs": {
+    "url": "https://github.com/maanlamp/OBA-wrapper/issues"
+  },
+  "description": "A wrapper to untuitively use the OBA-api",
+  "homepage": "https://github.com/maanlamp/OBA-wrapper#readme",
+  "license": "MIT",
+  "main": "js/index.js",
+  "name": "oba-wrapper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maanlamp/OBA-wrapper.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

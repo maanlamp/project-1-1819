@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src=".//js/script.js" type="module"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<form action="/" class="l-offsetleft">
+		<div id="search">
+			<img id="logo" src=".//images/logo.png" alt="Logo">
+			<div id="input">
+				<button id="clear" type="button"></button>
+				<input type="text" placeholder="Zoeken..." autocomplete="off" spellcheck="false">
+				<button id="filter" type="button"></button>
+			</div>
+			<div id="types">
+				<a href="#" class="link-active">Alle media</a>
+				<a href="#facet=type(book)">Boeken</a>
+				<a href="#facet=type(video)">Video's</a>
+				<a href="#facet=type(audio)">Audio</a>
+				<a href="#facet=type(photo)">Foto's</a>
+				<a href="#">Anders</a>
+			</div>
+		</div>
+	</form>
+	<div id="autosuggest"></div>
+	<main></main>
+	<aside class="card">
+			<h2>Meer zoals dit...</h2>
+	</aside>
+</body>
+
+</html>
